@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>When Where What — Personalized Korea Trips by Local Planners</title>
+    <meta name="description" content="When Where What connects foreign travelers with Korean local planners to craft custom itineraries." />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>html{scroll-behavior:smooth}</style>
+  </head>
+  <body class="min-h-screen bg-white text-gray-900">
+    <!-- Top Bar -->
+    <header class="sticky top-0 z-30 backdrop-blur bg-white/80 border-b border-gray-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-3">
+          <img src="./logo.svg" alt="When Where What" class="h-8 w-auto">
+          <span class="sr-only">When Where What</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#overview" class="hover:text-gray-900">Overview</a>
+          <a href="#features" class="hover:text-gray-900">Features</a>
+          <a href="#pricing" class="hover:text-gray-900">Pricing</a>
+          <a href="#cta" class="hover:text-gray-900">Join</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button class="hidden sm:inline-flex px-4 py-2 rounded-xl border border-gray-200 hover:border-gray-300">Sign in</button>
+          <a href="#cta" class="inline-flex px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-black">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(900px_360px_at_80%_-20%,#eef2ff,transparent)]"></div>
+      <div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+              Plan your Korea trip with locals.
+              <span class="block mt-2 text-gray-900">When • Where • What</span>
+            </h1>
+            <p class="mt-5 text-lg text-gray-600">
+              Tell us <strong>When</strong> you travel, <strong>Where</strong> you want to go, and <strong>What</strong> you love — a Korean local planner crafts a custom itinerary for you.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row gap-3">
+              <a href="#cta" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-black">Plan my trip →</a>
+              <a href="#become-planner" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-gray-200 hover:border-gray-300">Become a local planner</a>
+            </div>
+            <div class="mt-6 flex items-center gap-6 text-sm text-gray-600">
+              <div>✓ English first</div>
+              <div>✓ Auto-translate</div>
+              <div>✓ City & countryside</div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="aspect-[4/3] w-full rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
+              <div class="h-full w-full grid grid-cols-2">
+                <div class="p-4 border-r border-gray-100">
+                  <div class="text-xs text-gray-500 mb-2">Traveler Brief</div>
+                  <ul class="space-y-2 text-sm">
+                    <li>📅 5 days in Korea</li>
+                    <li>💸 Budget: $800</li>
+                    <li>🎯 Likes: coffee, street food, hiking</li>
+                    <li>🌍 Language: English</li>
+                  </ul>
+                  <div class="mt-4 text-xs text-gray-500">Auto-translate • Smart match</div>
+                </div>
+                <div class="p-4">
+                  <div class="text-xs text-gray-500 mb-2">Sample Itinerary (PDF/App)</div>
+                  <div class="space-y-2 text-sm">
+                    <div class="rounded-lg p-3 border border-gray-200">Day 1 — Seochon & Gyeongbokgung</div>
+                    <div class="rounded-lg p-3 border border-gray-200">Day 2 — Gangneung coastal cafés ☕️</div>
+                    <div class="rounded-lg p-3 border border-gray-200">Day 3 — Busan seafood alleys 🐟</div>
+                    <div class="rounded-lg p-3 border border-gray-200">Day 4 — Jeonju hanok & food</div>
+                    <div class="rounded-lg p-3 border border-gray-200">Day 5 — Seoul indie markets</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 mt-3">*UI mock — connects to MVP later</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Overview (KR + EN) -->
+    <section id="overview" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <div>
+          <h2 class="text-2xl font-bold">What is “When Where What”?</h2>
+          <p class="mt-2 text-gray-600">A platform that matches foreign independent travelers (FIT) with Korean local planners to build tailored itineraries.</p>
+        </div>
+        <div>
+          <h3 class="text-sm font-semibold text-gray-900">한국어 소개</h3>
+          <p class="mt-2 text-gray-600">외국인 자유여행자를 한국 로컬 플래너와 매칭하여 취향에 맞는 일정을 만들어주는 서비스입니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="bg-gray-50/60 border-y border-gray-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+        <h2 class="text-2xl font-bold">Core features</h2>
+        <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div class="p-5 rounded-2xl bg-white border border-gray-100">
+            <div class="font-semibold">Preference survey</div>
+            <div class="text-sm text-gray-600 mt-1">Simple quiz → instant itinerary draft</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-gray-100">
+            <div class="font-semibold">Local planner matching</div>
+            <div class="text-sm text-gray-600 mt-1">Style • region • budget</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-gray-100">
+            <div class="font-semibold">Auto itinerary builder</div>
+            <div class="text-sm text-gray-600 mt-1">Maps • timeline • links</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-gray-100">
+            <div class="font-semibold">Multilingual support</div>
+            <div class="text-sm text-gray-600 mt-1">EN / FR / JP / KR</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-gray-100">
+            <div class="font-semibold">Reviews & community</div>
+            <div class="text-sm text-gray-600 mt-1">Share and refine routes</div>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border border-gray-100">
+            <div class="font-semibold">Booking add‑ons</div>
+            <div class="text-sm text-gray-600 mt-1">Transport • dining • stays</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
+      <h2 class="text-2xl font-bold">Pricing (pilot)</h2>
+      <div class="mt-6 grid md:grid-cols-3 gap-5">
+        <div class="p-6 rounded-2xl border border-gray-100">
+          <div class="text-sm font-semibold mb-1">Custom itinerary</div>
+          <div class="text-3xl font-extrabold">$30–$100</div>
+          <p class="text-sm text-gray-600 mt-1">set by planner</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-gray-100">
+          <div class="text-sm font-semibold mb-1">Platform fee</div>
+          <div class="text-3xl font-extrabold">10–20%</div>
+          <p class="text-sm text-gray-600 mt-1">per transaction</p>
+        </div>
+        <div class="p-6 rounded-2xl border border-gray-100">
+          <div class="text-sm font-semibold mb-1">Add‑ons</div>
+          <div class="text-3xl font-extrabold">Pro</div>
+          <p class="text-sm text-gray-600 mt-1">auto‑translate • bookings</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="bg-gray-900 text-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="text-3xl font-bold">Join the beta waitlist</h2>
+          <p class="mt-2 text-white/80">Early travelers get a free sample itinerary. Early planners receive fee discounts and templates.</p>
+          <ul class="mt-4 text-sm text-white/80 space-y-2">
+            <li>✓ Email verification & onboarding quiz</li>
+            <li>✓ Recommended planners by region & budget</li>
+            <li>✓ Preview PDF/App itinerary</li>
+          </ul>
+        </div>
+        <form class="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur" onsubmit="event.preventDefault(); alert('Submitted! (replace with your real form)');">
+          <div class="grid grid-cols-1 gap-4">
+            <label class="text-sm">I am a
+              <select class="mt-1 w-full rounded-xl border border-white/30 bg-transparent p-2 text-white">
+                <option class="text-gray-900">Traveler</option>
+                <option class="text-gray-900">Local Planner</option>
+              </select>
+            </label>
+            <label class="text-sm">Email
+              <input type="email" placeholder="you@example.com" required class="mt-1 w-full rounded-xl border border-white/30 bg-transparent p-2 text-white placeholder-white/60"/>
+            </label>
+            <label class="text-sm">Preferred Language
+              <select class="mt-1 w-full rounded-xl border border-white/30 bg-transparent p-2 text-white">
+                <option class="text-gray-900">English</option>
+                <option class="text-gray-900">Français</option>
+                <option class="text-gray-900">日本語</option>
+                <option class="text-gray-900">한국어</option>
+              </select>
+            </label>
+            <button type="submit" class="mt-2 inline-flex justify-center rounded-xl bg-white text-gray-900 px-4 py-2 hover:bg-gray-100">Join waitlist</button>
+            <p class="text-xs text-white/70">By submitting, you agree to our privacy policy.</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Planner recruitment -->
+    <section id="become-planner">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-6 items-center">
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-semibold">Recruiting Founding 20 local planners</h3>
+          <p class="mt-2 text-gray-600 text-sm">Fee discounts, onboarding, and templates to monetize your neighborhood routes.</p>
+        </div>
+        <a href="#cta" class="inline-flex justify-center rounded-xl bg-gray-900 text-white px-4 py-2 hover:bg-black">Apply now</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>© <span id="year"></span> When Where What</div>
+        <div class="flex items-center gap-4">
+          <a class="hover:text-gray-900" href="#">Privacy</a>
+          <a class="hover:text-gray-900" href="#">Terms</a>
+          <a class="hover:text-gray-900" href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
