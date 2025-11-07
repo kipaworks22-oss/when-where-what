@@ -4,8 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>When Where What — Personalized Korea Trips by Local Planners</title>
-    <meta name="description" content="When Where What connects foreign travelers with Korean local planners to craft custom itineraries." />
+
+    <!-- Default (EN) SEO -->
+    <meta name="description" content="Plan your Korea trip with locals. When Where What connects foreign travelers with Korean local planners to craft custom itineraries." />
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+
+    <!-- Open Graph (default EN) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="When Where What | Personalized Korea Trips">
+    <meta property="og:description" content="Local-made itineraries — palaces, cafés, K‑pop experiences and more.">
+    <meta property="og:image" content="logo.svg">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Hreflang (alternate language URLs) -->
+    <link rel="alternate" hreflang="en" href="?lang=en">
+    <link rel="alternate" hreflang="ko" href="?lang=ko">
+    <link rel="alternate" hreflang="ja" href="?lang=ja">
+    <link rel="alternate" hreflang="zh" href="?lang=zh">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>html{scroll-behavior:smooth}</style>
   </head>
@@ -18,15 +34,21 @@
           <span class="sr-only">When Where What</span>
         </a>
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <a href="#overview" class="hover:text-gray-900">Overview</a>
-          <a href="#features" class="hover:text-gray-900">Features</a>
-          <a href="#samples" class="hover:text-gray-900">Samples</a>
-          <a href="#pricing" class="hover:text-gray-900">Pricing</a>
-          <a href="#cta" class="hover:text-gray-900">Join</a>
+          <a href="#overview" class="hover:text-gray-900" data-i18n="nav_overview">Overview</a>
+          <a href="#features" class="hover:text-gray-900" data-i18n="nav_features">Features</a>
+          <a href="#samples" class="hover:text-gray-900" data-i18n="nav_samples">Samples</a>
+          <a href="#themes" class="hover:text-gray-900" data-i18n="nav_themes">Themes</a>
+          <a href="#pricing" class="hover:text-gray-900" data-i18n="nav_pricing">Pricing</a>
+          <a href="#cta" class="hover:text-gray-900" data-i18n="nav_join">Join</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button class="hidden sm:inline-flex px-4 py-2 rounded-xl border border-gray-200 hover:border-gray-300">Sign in</button>
-          <a href="#cta" class="inline-flex px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-black">Get Started</a>
+          <select id="langSelect" class="px-2 py-1 rounded-lg border border-gray-200 text-sm">
+            <option value="en">English</option>
+            <option value="ko">한국어</option>
+            <option value="ja">日本語</option>
+            <option value="zh">中文(简体)</option>
+          </select>
+          <a href="#cta" class="inline-flex px-4 py-2 rounded-xl bg-gray-900 text-white hover:bg-black" data-i18n="cta_get_started">Get Started</a>
         </div>
       </div>
     </header>
@@ -38,48 +60,48 @@
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-              Plan your Korea trip with locals.
-              <span class="block mt-2 text-gray-900">When • Where • What</span>
+              <span data-i18n="hero_title1">Plan your Korea trip with locals.</span>
+              <span class="block mt-2 text-gray-900" data-i18n="hero_title2">When • Where • What</span>
             </h1>
-            <p class="mt-5 text-lg text-gray-600">
+            <p class="mt-5 text-lg text-gray-600" data-i18n="hero_desc">
               Tell us <strong>When</strong> you travel, <strong>Where</strong> you want to go, and <strong>What</strong> you love — a Korean local planner crafts a custom itinerary for you.
             </p>
             <div class="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href="#cta" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-black">Plan my trip →</a>
-              <a href="#become-planner" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-gray-200 hover:border-gray-300">Become a local planner</a>
+              <a href="#cta" class="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-gray-900 text-white hover:bg-black" data-i18n="hero_btn_plan">Plan my trip →</a>
+              <a href="#become-planner" class="inline-flex items-center justify-center px-5 py-3 rounded-xl border border-gray-200 hover:border-gray-300" data-i18n="hero_btn_planner">Become a local planner</a>
             </div>
             <div class="mt-6 flex items-center gap-6 text-sm text-gray-600">
-              <div>✓ English first</div>
-              <div>✓ Auto-translate</div>
-              <div>✓ City & countryside</div>
+              <div data-i18n="hero_b1">✓ English first</div>
+              <div data-i18n="hero_b2">✓ Auto-translate</div>
+              <div data-i18n="hero_b3">✓ City & countryside</div>
             </div>
           </div>
           <div class="relative">
             <div class="aspect-[4/3] w-full rounded-2xl border border-gray-100 shadow-sm overflow-hidden bg-white">
               <div class="h-full w-full grid grid-cols-2">
                 <div class="p-4 border-r border-gray-100">
-                  <div class="text-xs text-gray-500 mb-2">Traveler Brief</div>
+                  <div class="text-xs text-gray-500 mb-2" data-i18n="hero_brief">Traveler Brief</div>
                   <ul class="space-y-2 text-sm">
-                    <li>📅 5 days in Korea</li>
-                    <li>💸 Budget: $800</li>
-                    <li>🎯 Likes: coffee, street food, hiking</li>
-                    <li>🌍 Language: English</li>
+                    <li>📅 <span data-i18n="brief_days">5 days in Korea</span></li>
+                    <li>💸 <span data-i18n="brief_budget">Budget: $800</span></li>
+                    <li>🎯 <span data-i18n="brief_likes">Likes: coffee, street food, hiking</span></li>
+                    <li>🌍 <span data-i18n="brief_lang">Language: English</span></li>
                   </ul>
-                  <div class="mt-4 text-xs text-gray-500">Auto-translate • Smart match</div>
+                  <div class="mt-4 text-xs text-gray-500" data-i18n="brief_note">Auto-translate • Smart match</div>
                 </div>
                 <div class="p-4">
-                  <div class="text-xs text-gray-500 mb-2">Sample Itinerary (PDF/App)</div>
+                  <div class="text-xs text-gray-500 mb-2" data-i18n="hero_sampleit">Sample Itinerary (PDF/App)</div>
                   <div class="space-y-2 text-sm">
-                    <div class="rounded-lg p-3 border border-gray-200">Day 1 — Seochon & Gyeongbokgung</div>
-                    <div class="rounded-lg p-3 border border-gray-200">Day 2 — Gangneung coastal cafés ☕️</div>
-                    <div class="rounded-lg p-3 border border-gray-200">Day 3 — Busan seafood alleys 🐟</div>
-                    <div class="rounded-lg p-3 border border-gray-200">Day 4 — Jeonju hanok & food</div>
-                    <div class="rounded-lg p-3 border border-gray-200">Day 5 — Seoul indie markets</div>
+                    <div class="rounded-lg p-3 border border-gray-200" data-i18n="sample_day1">Day 1 — Seochon & Gyeongbokgung</div>
+                    <div class="rounded-lg p-3 border border-gray-200" data-i18n="sample_day2">Day 2 — Gangneung coastal cafés ☕️</div>
+                    <div class="rounded-lg p-3 border border-gray-200" data-i18n="sample_day3">Day 3 — Busan seafood alleys 🐟</div>
+                    <div class="rounded-lg p-3 border border-gray-200" data-i18n="sample_day4">Day 4 — Jeonju hanok & food</div>
+                    <div class="rounded-lg p-3 border border-gray-200" data-i18n="sample_day5">Day 5 — Seoul indie markets</div>
                   </div>
                 </div>
               </div>
             </div>
-            <p class="text-xs text-gray-500 mt-3">*UI mock — connects to MVP later</p>
+            <p class="text-xs text-gray-500 mt-3" data-i18n="hero_mocknote">*UI mock — connects to MVP later</p>
           </div>
         </div>
       </div>
@@ -89,12 +111,12 @@
     <section id="overview" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
       <div class="grid lg:grid-cols-2 gap-8">
         <div>
-          <h2 class="text-2xl font-bold">What is “When Where What”?</h2>
-          <p class="mt-2 text-gray-600">A platform that matches foreign independent travelers (FIT) with Korean local planners to build tailored itineraries.</p>
+          <h2 class="text-2xl font-bold" data-i18n="ov_title">What is “When Where What”?</h2>
+          <p class="mt-2 text-gray-600" data-i18n="ov_desc">A platform that matches foreign independent travelers (FIT) with Korean local planners to build tailored itineraries.</p>
         </div>
         <div>
-          <h3 class="text-sm font-semibold text-gray-900">한국어 소개</h3>
-          <p class="mt-2 text-gray-600">외국인 자유여행자를 한국 로컬 플래너와 매칭하여 취향에 맞는 일정을 만들어주는 서비스입니다.</p>
+          <h3 class="text-sm font-semibold text-gray-900" data-i18n="ov_sub_kr">한국어 소개</h3>
+          <p class="mt-2 text-gray-600" data-i18n="ov_desc_kr">외국인 자유여행자를 한국 로컬 플래너와 매칭하여 취향에 맞는 일정을 만들어주는 서비스입니다.</p>
         </div>
       </div>
     </section>
@@ -102,31 +124,31 @@
     <!-- Features -->
     <section id="features" class="bg-gray-50/60 border-y border-gray-100">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-        <h2 class="text-2xl font-bold">Core features</h2>
+        <h2 class="text-2xl font-bold" data-i18n="feat_title">Core features</h2>
         <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           <div class="p-5 rounded-2xl bg-white border border-gray-100">
-            <div class="font-semibold">Preference survey</div>
-            <div class="text-sm text-gray-600 mt-1">Simple quiz → instant itinerary draft</div>
+            <div class="font-semibold" data-i18n="feat1_t">Preference survey</div>
+            <div class="text-sm text-gray-600 mt-1" data-i18n="feat1_d">Simple quiz → instant itinerary draft</div>
           </div>
           <div class="p-5 rounded-2xl bg-white border border-gray-100">
-            <div class="font-semibold">Local planner matching</div>
-            <div class="text-sm text-gray-600 mt-1">Style • region • budget</div>
+            <div class="font-semibold" data-i18n="feat2_t">Local planner matching</div>
+            <div class="text-sm text-gray-600 mt-1" data-i18n="feat2_d">Style • region • budget</div>
           </div>
           <div class="p-5 rounded-2xl bg-white border border-gray-100">
-            <div class="font-semibold">Auto itinerary builder</div>
-            <div class="text-sm text-gray-600 mt-1">Maps • timeline • links</div>
+            <div class="font-semibold" data-i18n="feat3_t">Auto itinerary builder</div>
+            <div class="text-sm text-gray-600 mt-1" data-i18n="feat3_d">Maps • timeline • links</div>
           </div>
           <div class="p-5 rounded-2xl bg-white border border-gray-100">
-            <div class="font-semibold">Multilingual support</div>
-            <div class="text-sm text-gray-600 mt-1">EN / FR / JP / KR</div>
+            <div class="font-semibold" data-i18n="feat4_t">Multilingual support</div>
+            <div class="text-sm text-gray-600 mt-1" data-i18n="feat4_d">EN / FR / JP / KR</div>
           </div>
           <div class="p-5 rounded-2xl bg-white border border-gray-100">
-            <div class="font-semibold">Reviews & community</div>
-            <div class="text-sm text-gray-600 mt-1">Share and refine routes</div>
+            <div class="font-semibold" data-i18n="feat5_t">Reviews & community</div>
+            <div class="text-sm text-gray-600 mt-1" data-i18n="feat5_d">Share and refine routes</div>
           </div>
           <div class="p-5 rounded-2xl bg-white border border-gray-100">
-            <div class="font-semibold">Booking add‑ons</div>
-            <div class="text-sm text-gray-600 mt-1">Transport • dining • stays</div>
+            <div class="font-semibold" data-i18n="feat6_t">Booking add‑ons</div>
+            <div class="text-sm text-gray-600 mt-1" data-i18n="feat6_d">Transport • dining • stays</div>
           </div>
         </div>
       </div>
@@ -134,90 +156,108 @@
 
     <!-- Sample Itineraries -->
     <section id="samples" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-      <h2 class="text-2xl font-bold text-center">🇰🇷 Sample Korea Itineraries</h2>
-      <p class="mt-2 text-center text-gray-600">
+      <h2 class="text-2xl font-bold text-center" data-i18n="samples_title">🇰🇷 Sample Korea Itineraries</h2>
+      <p class="mt-2 text-center text-gray-600" data-i18n="samples_desc">
         Realistic examples crafted by local planners — mix & match city and countryside.
       </p>
 
       <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Seoul -->
         <div class="rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-          <h3 class="text-lg font-semibold">3 Days in Seoul</h3>
-          <p class="mt-1 text-sm text-gray-500">Culture • Cafés • City vibes</p>
+          <h3 class="text-lg font-semibold" data-i18n="seoul_t">3 Days in Seoul</h3>
+          <p class="mt-1 text-sm text-gray-500" data-i18n="seoul_s">Culture • Cafés • City vibes</p>
           <ul class="mt-3 space-y-1 text-sm">
-            <li>Day 1 — Gyeongbokgung, Bukchon, Insadong</li>
-            <li>Day 2 — Seochon cafés & Hongdae nightlife</li>
-            <li>Day 3 — Han River bike & food tour</li>
+            <li data-i18n="seoul_d1">Day 1 — Gyeongbokgung, Bukchon, Insadong</li>
+            <li data-i18n="seoul_d2">Day 2 — Seochon cafés & Hongdae nightlife</li>
+            <li data-i18n="seoul_d3">Day 3 — Han River bike & food tour</li>
           </ul>
-          <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View full plan →</a>
         </div>
 
         <!-- Busan -->
         <div class="rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-          <h3 class="text-lg font-semibold">2 Days in Busan</h3>
-          <p class="mt-1 text-sm text-gray-500">Seafood • Beaches • Culture</p>
+          <h3 class="text-lg font-semibold" data-i18n="busan_t">2 Days in Busan</h3>
+          <p class="mt-1 text-sm text-gray-500" data-i18n="busan_s">Seafood • Beaches • Culture</p>
           <ul class="mt-3 space-y-1 text-sm">
-            <li>Day 1 — Gamcheon Village, Jagalchi Market</li>
-            <li>Day 2 — Haeundae beach & Gwangalli night view</li>
+            <li data-i18n="busan_d1">Day 1 — Gamcheon Village, Jagalchi Market</li>
+            <li data-i18n="busan_d2">Day 2 — Haeundae beach & Gwangalli night view</li>
           </ul>
-          <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View full plan →</a>
         </div>
 
         <!-- Jeju -->
         <div class="rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-          <h3 class="text-lg font-semibold">3 Days in Jeju</h3>
-          <p class="mt-1 text-sm text-gray-500">Nature • Coast • Local food</p>
+          <h3 class="text-lg font-semibold" data-i18n="jeju_t">3 Days in Jeju</h3>
+          <p class="mt-1 text-sm text-gray-500" data-i18n="jeju_s">Nature • Coast • Local food</p>
           <ul class="mt-3 space-y-1 text-sm">
-            <li>Day 1 — Seongsan Ilchulbong & east coast cafés</li>
-            <li>Day 2 — Hallasan trail (short) & black pork</li>
-            <li>Day 3 — Aewol coastal drive & sunset</li>
+            <li data-i18n="jeju_d1">Day 1 — Seongsan Ilchulbong & east coast cafés</li>
+            <li data-i18n="jeju_d2">Day 2 — Hallasan trail (short) & black pork</li>
+            <li data-i18n="jeju_d3">Day 3 — Aewol coastal drive & sunset</li>
           </ul>
-          <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View full plan →</a>
         </div>
 
         <!-- Jeonju -->
         <div class="rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-          <h3 class="text-lg font-semibold">1 Day in Jeonju</h3>
-          <p class="mt-1 text-sm text-gray-500">Tradition • Food • Hanok village</p>
+          <h3 class="text-lg font-semibold" data-i18n="jeonju_t">1 Day in Jeonju</h3>
+          <p class="mt-1 text-sm text-gray-500" data-i18n="jeonju_s">Tradition • Food • Hanok village</p>
           <ul class="mt-3 space-y-1 text-sm">
-            <li>Morning — Hanok Village walk & photo spots</li>
-            <li>Lunch — Bibimbap & street food</li>
-            <li>Afternoon — Crafts, tea houses & omija</li>
+            <li data-i18n="jeonju_d1">Morning — Hanok Village walk & photo spots</li>
+            <li data-i18n="jeonju_d2">Lunch — Bibimbap & street food</li>
+            <li data-i18n="jeonju_d3">Afternoon — Crafts, tea houses & omija</li>
           </ul>
-          <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View full plan →</a>
         </div>
 
         <!-- Gangneung -->
         <div class="rounded-2xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition">
-          <h3 class="text-lg font-semibold">2 Days in Gangneung</h3>
-          <p class="mt-1 text-sm text-gray-500">Coffee • Coast • Market</p>
+          <h3 class="text-lg font-semibold" data-i18n="gangneung_t">2 Days in Gangneung</h3>
+          <p class="mt-1 text-sm text-gray-500" data-i18n="gangneung_s">Coffee • Coast • Market</p>
           <ul class="mt-3 space-y-1 text-sm">
-            <li>Day 1 — Anmok Coffee Street & Jeongdongjin</li>
-            <li>Day 2 — Ojukheon & Central Market eats</li>
+            <li data-i18n="gangneung_d1">Day 1 — Anmok Coffee Street & Jeongdongjin</li>
+            <li data-i18n="gangneung_d2">Day 2 — Ojukheon & Central Market eats</li>
           </ul>
-          <a href="#" class="inline-block mt-4 text-blue-600 hover:underline text-sm">View full plan →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Themed Tours -->
+    <section id="themes" class="bg-gray-50 border-y border-gray-100">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-2xl font-bold text-center" data-i18n="themes_title">🇰🇷 Korea Themed Tours</h2>
+        <p class="mt-2 text-center text-gray-600" data-i18n="themes_desc">Choose your vibe — from palaces to pop culture!</p>
+
+        <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold" data-i18n="theme_palace_t">🏯 Korean Palace Tour</h3>
+            <p class="text-sm text-gray-600 mt-1" data-i18n="theme_palace_d">Gyeongbokgung, Changdeokgung & history walk</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold" data-i18n="theme_cafe_t">☕ Seoul Café Tour</h3>
+            <p class="text-sm text-gray-600 mt-1" data-i18n="theme_cafe_d">Seochon, Ikseon-dong, and Hanok cafés</p>
+          </div>
+          <div class="p-6 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition">
+            <h3 class="text-lg font-semibold" data-i18n="theme_kpop_t">🎤 K‑Pop Experience Tour</h3>
+            <p class="text-sm text-gray-600 mt-1" data-i18n="theme_kpop_d">Music labels, dance studios & fan spots</p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Pricing -->
     <section id="pricing" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
-      <h2 class="text-2xl font-bold">Pricing (pilot)</h2>
+      <h2 class="text-2xl font-bold" data-i18n="price_title">Pricing (pilot)</h2>
       <div class="mt-6 grid md:grid-cols-3 gap-5">
         <div class="p-6 rounded-2xl border border-gray-100">
-          <div class="text-sm font-semibold mb-1">Custom itinerary</div>
+          <div class="text-sm font-semibold mb-1" data-i18n="price1_t">Custom itinerary</div>
           <div class="text-3xl font-extrabold">$30–$100</div>
-          <p class="text-sm text-gray-600 mt-1">set by planner</p>
+          <p class="text-sm text-gray-600 mt-1" data-i18n="price1_d">set by planner</p>
         </div>
         <div class="p-6 rounded-2xl border border-gray-100">
-          <div class="text-sm font-semibold mb-1">Platform fee</div>
+          <div class="text-sm font-semibold mb-1" data-i18n="price2_t">Platform fee</div>
           <div class="text-3xl font-extrabold">10–20%</div>
-          <p class="text-sm text-gray-600 mt-1">per transaction</p>
+          <p class="text-sm text-gray-600 mt-1" data-i18n="price2_d">per transaction</p>
         </div>
         <div class="p-6 rounded-2xl border border-gray-100">
-          <div class="text-sm font-semibold mb-1">Add‑ons</div>
+          <div class="text-sm font-semibold mb-1" data-i18n="price3_t">Add‑ons</div>
           <div class="text-3xl font-extrabold">Pro</div>
-          <p class="text-sm text-gray-600 mt-1">auto‑translate • bookings</p>
+          <p class="text-sm text-gray-600 mt-1" data-i18n="price3_d">auto‑translate • bookings</p>
         </div>
       </div>
     </section>
@@ -226,26 +266,26 @@
     <section id="cta" class="bg-gray-900 text-white">
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 grid lg:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 class="text-3xl font-bold">Join the beta waitlist</h2>
-          <p class="mt-2 text-white/80">Early travelers get a free sample itinerary. Early planners receive fee discounts and templates.</p>
+          <h2 class="text-3xl font-bold" data-i18n="cta_title">Join the beta waitlist</h2>
+          <p class="mt-2 text-white/80" data-i18n="cta_desc">Early travelers get a free sample itinerary. Early planners receive fee discounts and templates.</p>
           <ul class="mt-4 text-sm text-white/80 space-y-2">
-            <li>✓ Email verification & onboarding quiz</li>
-            <li>✓ Recommended planners by region & budget</li>
-            <li>✓ Preview PDF/App itinerary</li>
+            <li data-i18n="cta_li1">✓ Email verification & onboarding quiz</li>
+            <li data-i18n="cta_li2">✓ Recommended planners by region & budget</li>
+            <li data-i18n="cta_li3">✓ Preview PDF/App itinerary</li>
           </ul>
         </div>
         <form class="p-6 rounded-2xl border border-white/10 bg-white/5 backdrop-blur" onsubmit="event.preventDefault(); alert('Submitted! (replace with your real form)');">
           <div class="grid grid-cols-1 gap-4">
-            <label class="text-sm">I am a
+            <label class="text-sm" data-i18n="form_role_label">I am a
               <select class="mt-1 w-full rounded-xl border border-white/30 bg-transparent p-2 text-white">
-                <option class="text-gray-900">Traveler</option>
-                <option class="text-gray-900">Local Planner</option>
+                <option class="text-gray-900" data-i18n="form_role_trav">Traveler</option>
+                <option class="text-gray-900" data-i18n="form_role_planner">Local Planner</option>
               </select>
             </label>
             <label class="text-sm">Email
               <input type="email" placeholder="you@example.com" required class="mt-1 w-full rounded-xl border border-white/30 bg-transparent p-2 text-white placeholder-white/60"/>
             </label>
-            <label class="text-sm">Preferred Language
+            <label class="text-sm" data-i18n="form_lang_label">Preferred Language
               <select class="mt-1 w-full rounded-xl border border-white/30 bg-transparent p-2 text-white">
                 <option class="text-gray-900">English</option>
                 <option class="text-gray-900">Français</option>
@@ -253,21 +293,10 @@
                 <option class="text-gray-900">한국어</option>
               </select>
             </label>
-            <button type="submit" class="mt-2 inline-flex justify-center rounded-xl bg-white text-gray-900 px-4 py-2 hover:bg-gray-100">Join waitlist</button>
-            <p class="text-xs text-white/70">By submitting, you agree to our privacy policy.</p>
+            <button type="submit" class="mt-2 inline-flex justify-center rounded-xl bg-white text-gray-900 px-4 py-2 hover:bg-gray-100" data-i18n="cta_btn">Join waitlist</button>
+            <p class="text-xs text-white/70" data-i18n="cta_privacy">By submitting, you agree to our privacy policy.</p>
           </div>
         </form>
-      </div>
-    </section>
-
-    <!-- Planner recruitment -->
-    <section id="become-planner">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-6 items-center">
-        <div class="md:col-span-2">
-          <h3 class="text-xl font-semibold">Recruiting Founding 20 local planners</h3>
-          <p class="mt-2 text-gray-600 text-sm">Fee discounts, onboarding, and templates to monetize your neighborhood routes.</p>
-        </div>
-        <a href="#cta" class="inline-flex justify-center rounded-xl bg-gray-900 text-white px-4 py-2 hover:bg-black">Apply now</a>
       </div>
     </section>
 
@@ -276,13 +305,219 @@
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 text-sm text-gray-600 flex flex-col md:flex-row items-center justify-between gap-4">
         <div>© <span id="year"></span> When Where What</div>
         <div class="flex items-center gap-4">
-          <a class="hover:text-gray-900" href="#">Privacy</a>
-          <a class="hover:text-gray-900" href="#">Terms</a>
-          <a class="hover:text-gray-900" href="#">Contact</a>
+          <a class="hover:text-gray-900" href="#" data-i18n="foot_privacy">Privacy</a>
+          <a class="hover:text-gray-900" href="#" data-i18n="foot_terms">Terms</a>
+          <a class="hover:text-gray-900" href="#" data-i18n="foot_contact">Contact</a>
         </div>
       </div>
     </footer>
 
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script>
+      // i18n dictionaries (EN default)
+      const I18N = {
+        en: {
+          _lang: "en", _ogLocale: "en_US",
+          _title: "When Where What — Personalized Korea Trips by Local Planners",
+          _desc: "Plan your Korea trip with locals. When Where What connects foreign travelers with Korean local planners to craft custom itineraries.",
+          _ogTitle: "When Where What | Personalized Korea Trips",
+          _ogDesc: "Local-made itineraries — palaces, cafés, K‑pop experiences and more.",
+          nav_overview:"Overview", nav_features:"Features", nav_samples:"Samples", nav_themes:"Themes", nav_pricing:"Pricing", nav_join:"Join",
+          cta_get_started:"Get Started",
+          hero_title1:"Plan your Korea trip with locals.", hero_title2:"When • Where • What",
+          hero_desc:"Tell us <strong>When</strong> you travel, <strong>Where</strong> you want to go, and <strong>What</strong> you love — a Korean local planner crafts a custom itinerary for you.",
+          hero_btn_plan:"Plan my trip →", hero_btn_planner:"Become a local planner",
+          hero_b1:"✓ English first", hero_b2:"✓ Auto-translate", hero_b3:"✓ City & countryside",
+          hero_brief:"Traveler Brief", brief_days:"5 days in Korea", brief_budget:"Budget: $800", brief_likes:"Likes: coffee, street food, hiking", brief_lang:"Language: English", brief_note:"Auto-translate • Smart match", hero_sampleit:"Sample Itinerary (PDF/App)",
+          sample_day1:"Day 1 — Seochon & Gyeongbokgung", sample_day2:"Day 2 — Gangneung coastal cafés ☕️", sample_day3:"Day 3 — Busan seafood alleys 🐟", sample_day4:"Day 4 — Jeonju hanok & food", sample_day5:"Day 5 — Seoul indie markets", hero_mocknote:"*UI mock — connects to MVP later",
+          ov_title:"What is “When Where What”?", ov_desc:"A platform that matches foreign independent travelers (FIT) with Korean local planners to build tailored itineraries.", ov_sub_kr:"한국어 소개", ov_desc_kr:"외국인 자유여행자를 한국 로컬 플래너와 매칭하여 취향에 맞는 일정을 만들어주는 서비스입니다.",
+          feat_title:"Core features",
+          feat1_t:"Preference survey", feat1_d:"Simple quiz → instant itinerary draft",
+          feat2_t:"Local planner matching", feat2_d:"Style • region • budget",
+          feat3_t:"Auto itinerary builder", feat3_d:"Maps • timeline • links",
+          feat4_t:"Multilingual support", feat4_d:"EN / FR / JP / KR",
+          feat5_t:"Reviews & community", feat5_d:"Share and refine routes",
+          feat6_t:"Booking add‑ons", feat6_d:"Transport • dining • stays",
+          samples_title:"🇰🇷 Sample Korea Itineraries", samples_desc:"Realistic examples crafted by local planners — mix & match city and countryside.",
+          seoul_t:"3 Days in Seoul", seoul_s:"Culture • Cafés • City vibes", seoul_d1:"Day 1 — Gyeongbokgung, Bukchon, Insadong", seoul_d2:"Day 2 — Seochon cafés & Hongdae nightlife", seoul_d3:"Day 3 — Han River bike & food tour",
+          busan_t:"2 Days in Busan", busan_s:"Seafood • Beaches • Culture", busan_d1:"Day 1 — Gamcheon Village, Jagalchi Market", busan_d2:"Day 2 — Haeundae beach & Gwangalli night view",
+          jeju_t:"3 Days in Jeju", jeju_s:"Nature • Coast • Local food", jeju_d1:"Day 1 — Seongsan Ilchulbong & east coast cafés", jeju_d2:"Day 2 — Hallasan trail (short) & black pork", jeju_d3:"Day 3 — Aewol coastal drive & sunset",
+          jeonju_t:"1 Day in Jeonju", jeonju_s:"Tradition • Food • Hanok village", jeonju_d1:"Morning — Hanok Village walk & photo spots", jeonju_d2:"Lunch — Bibimbap & street food", jeonju_d3:"Afternoon — Crafts, tea houses & omija",
+          gangneung_t:"2 Days in Gangneung", gangneung_s:"Coffee • Coast • Market", gangneung_d1:"Day 1 — Anmok Coffee Street & Jeongdongjin", gangneung_d2:"Day 2 — Ojukheon & Central Market eats",
+          themes_title:"🇰🇷 Korea Themed Tours", themes_desc:"Choose your vibe — from palaces to pop culture!",
+          theme_palace_t:"🏯 Korean Palace Tour", theme_palace_d:"Gyeongbokgung, Changdeokgung & history walk",
+          theme_cafe_t:"☕ Seoul Café Tour", theme_cafe_d:"Seochon, Ikseon-dong, and Hanok cafés",
+          theme_kpop_t:"🎤 K‑Pop Experience Tour", theme_kpop_d:"Music labels, dance studios & fan spots",
+          price_title:"Pricing (pilot)", price1_t:"Custom itinerary", price1_d:"set by planner", price2_t:"Platform fee", price2_d:"per transaction", price3_t:"Add‑ons", price3_d:"auto‑translate • bookings",
+          cta_title:"Join the beta waitlist", cta_desc:"Early travelers get a free sample itinerary. Early planners receive fee discounts and templates.", cta_li1:"✓ Email verification & onboarding quiz", cta_li2:"✓ Recommended planners by region & budget", cta_li3:"✓ Preview PDF/App itinerary", cta_btn:"Join waitlist", cta_privacy:"By submitting, you agree to our privacy policy.",
+          foot_privacy:"Privacy", foot_terms:"Terms", foot_contact:"Contact"
+        },
+        ko: {
+          _lang: "ko", _ogLocale: "ko_KR",
+          _title: "When Where What — 한국 맞춤 여행 플래너",
+          _desc: "한국 로컬과 함께 여행 일정을 만드세요. 외국인 여행자를 한국 로컬 플래너와 연결해 맞춤 일정을 제공합니다.",
+          _ogTitle: "When Where What | 한국 맞춤 여행 플래너",
+          _ogDesc: "로컬이 만들어주는 진짜 한국 여행 — 고궁·카페·K‑Pop 체험까지!",
+          nav_overview:"소개", nav_features:"기능", nav_samples:"예시 일정", nav_themes:"테마 투어", nav_pricing:"요금", nav_join:"참여하기",
+          cta_get_started:"시작하기",
+          hero_title1:"한국 로컬과 함께 여행 일정을 만드세요.", hero_title2:"When • Where • What",
+          hero_desc:"여행 <strong>언제</strong> 가는지, <strong>어디</strong>로 가고 싶은지, <strong>무엇</strong>을 좋아하는지만 알려주세요. 한국 로컬 플래너가 맞춤 일정을 만들어 드립니다.",
+          hero_btn_plan:"내 일정 만들기 →", hero_btn_planner:"로컬 플래너 지원",
+          hero_b1:"✓ 영어 우선", hero_b2:"✓ 자동 번역", hero_b3:"✓ 도시 & 자연",
+          hero_brief:"여행자 브리프", brief_days:"한국 5일", brief_budget:"예산: $800", brief_likes:"선호: 커피, 길거리음식, 하이킹", brief_lang:"언어: 영어", brief_note:"자동 번역 • 스마트 매칭", hero_sampleit:"샘플 일정 (PDF/App)",
+          sample_day1:"1일차 — 서촌 & 경복궁", sample_day2:"2일차 — 강릉 바닷가 카페 ☕️", sample_day3:"3일차 — 부산 해산물 골목 🐟", sample_day4:"4일차 — 전주 한옥 & 음식", sample_day5:"5일차 — 서울 인디 마켓", hero_mocknote:"*UI 예시 — MVP와 연결 예정",
+          ov_title:"“When Where What”이란?", ov_desc:"외국인 자유여행자를 한국 로컬 플래너와 매칭해 맞춤 일정을 만드는 플랫폼입니다.", ov_sub_kr:"한국어 소개", ov_desc_kr:"외국인 자유여행자를 한국 로컬 플래너와 매칭하여 취향에 맞는 일정을 만들어주는 서비스입니다.",
+          feat_title:"주요 기능",
+          feat1_t:"취향 설문", feat1_d:"간단 퀴즈 → 즉시 초안",
+          feat2_t:"로컬 플래너 매칭", feat2_d:"스타일 • 지역 • 예산",
+          feat3_t:"일정 자동 생성", feat3_d:"지도 • 타임라인 • 링크",
+          feat4_t:"다국어 지원", feat4_d:"영/프/일/한",
+          feat5_t:"후기 & 커뮤니티", feat5_d:"루트 공유·개선",
+          feat6_t:"예약 연동", feat6_d:"교통 • 식당 • 숙소",
+          samples_title:"🇰🇷 한국 여행 일정 예시", samples_desc:"로컬 플래너가 만든 현실적인 일정 — 도시와 자연을 조합하세요.",
+          seoul_t:"서울 3일", seoul_s:"문화 • 카페 • 도심", seoul_d1:"1일차 — 경복궁, 북촌, 인사동", seoul_d2:"2일차 — 서촌 카페 & 홍대 야경", seoul_d3:"3일차 — 한강 자전거 & 맛투어",
+          busan_t:"부산 2일", busan_s:"해산물 • 해변 • 문화", busan_d1:"1일차 — 감천문화마을, 자갈치시장", busan_d2:"2일차 — 해운대 & 광안리 야경",
+          jeju_t:"제주 3일", jeju_s:"자연 • 해안 • 로컬 음식", jeju_d1:"1일차 — 성산일출봉 & 동부 카페", jeju_d2:"2일차 — 한라산(짧은 코스) & 흑돼지", jeju_d3:"3일차 — 애월 해안 드라이브 & 석양",
+          jeonju_t:"전주 1일", jeonju_s:"전통 • 음식 • 한옥마을", jeonju_d1:"오전 — 한옥마을 산책 & 포토스팟", jeonju_d2:"점심 — 비빔밥 & 길거리음식", jeonju_d3:"오후 — 공예, 다방 & 오미자",
+          gangneung_t:"강릉 2일", gangneung_s:"커피 • 해안 • 시장", gangneung_d1:"1일차 — 안목 커피거리 & 정동진", gangneung_d2:"2일차 — 오죽헌 & 중앙시장 먹거리",
+          themes_title:"🇰🇷 테마 투어", themes_desc:"고궁부터 K‑Pop까지, 취향대로 선택하세요!",
+          theme_palace_t:"🏯 한국 고궁 투어", theme_palace_d:"경복궁, 창덕궁 & 히스토리 워크",
+          theme_cafe_t:"☕ 서울 카페 투어", theme_cafe_d:"서촌·익선동·한옥 카페",
+          theme_kpop_t:"🎤 K‑Pop 체험 투어", theme_kpop_d:"기획사, 댄스 스튜디오 & 팬 스팟",
+          price_title:"요금 (파일럿)", price1_t:"맞춤 일정", price1_d:"플래너 책정", price2_t:"플랫폼 수수료", price2_d:"거래당", price3_t:"추가 기능", price3_d:"자동 번역 • 예약",
+          cta_title:"베타 대기자 등록", cta_desc:"여행자: 무료 샘플 일정 / 플래너: 수수료 할인 & 템플릿", cta_li1:"✓ 이메일 인증 & 온보딩 설문", cta_li2:"✓ 지역·예산 기반 플래너 추천", cta_li3:"✓ PDF/App 일정 미리보기", cta_btn:"대기자 등록", cta_privacy:"제출 시 개인정보 처리방침에 동의합니다.",
+          foot_privacy:"개인정보", foot_terms:"이용약관", foot_contact:"문의"
+        },
+        ja: {
+          _lang: "ja", _ogLocale: "ja_JP",
+          _title: "When Where What — 韓国オーダーメイド旅程",
+          _desc: "韓国ローカルと一緒に旅程を作成。外国人FIT旅行者とローカルプランナーをつなぐサービス。",
+          _ogTitle: "When Where What | 韓国オーダーメイド旅程",
+          _ogDesc: "ローカルが作る旅程 — 宮殿、カフェ、K‑Pop体験まで！",
+          nav_overview:"概要", nav_features:"機能", nav_samples:"サンプル", nav_themes:"テーマツアー", nav_pricing:"料金", nav_join:"参加",
+          cta_get_started:"はじめる",
+          hero_title1:"韓国ローカルと一緒に旅程を作成。", hero_title2:"When • Where • What",
+          hero_desc:"<strong>いつ</strong>行くのか、<strong>どこ</strong>へ行きたいのか、<strong>何</strong>が好きかを教えてください。韓国のローカルプランナーがあなた専用の旅程を作ります。",
+          hero_btn_plan:"旅程を作る →", hero_btn_planner:"ローカルプランナーになる",
+          hero_b1:"✓ 英語ファースト", hero_b2:"✓ 自動翻訳", hero_b3:"✓ 都市 & 自然",
+          hero_brief:"トラベラーブリーフ", brief_days:"韓国5日", brief_budget:"予算: $800", brief_likes:"好み: コーヒー、屋台、ハイキング", brief_lang:"言語: 英語", brief_note:"自動翻訳 • スマートマッチ", hero_sampleit:"サンプル旅程 (PDF/App)",
+          sample_day1:"1日目 — 西村 & 景福宮", sample_day2:"2日目 — 江陵カフェ ☕️", sample_day3:"3日目 — 釜山シーフード街 🐟", sample_day4:"4日目 — 全州韓屋 & グルメ", sample_day5:"5日目 — ソウルのマーケット", hero_mocknote:"*UIモック — 後でMVPに接続",
+          ov_title:"“When Where What”とは？", ov_desc:"外国人FIT旅行者と韓国のローカルプランナーをマッチングして、オーダーメイドの旅程を作成するプラットフォームです。", ov_sub_kr:"韓国語の紹介", ov_desc_kr:"外国人自由旅行者を韓国ローカルプランナーとマッチングし、好みに合った旅程を作るサービスです。",
+          feat_title:"主な機能",
+          feat1_t:"嗜好アンケート", feat1_d:"簡単なクイズ → 旅程ドラフト",
+          feat2_t:"ローカルプランナーのマッチング", feat2_d:"スタイル・地域・予算",
+          feat3_t:"自動旅程ビルダー", feat3_d:"地図・タイムライン・リンク",
+          feat4_t:"多言語対応", feat4_d:"英/仏/日/韓",
+          feat5_t:"レビュー & コミュニティ", feat5_d:"ルート共有と改善",
+          feat6_t:"予約アドオン", feat6_d:"交通・食事・宿泊",
+          samples_title:"🇰🇷 韓国旅程サンプル", samples_desc:"ローカルが作る現実的なプラン — 都市と自然を自由に組み合わせ。",
+          seoul_t:"ソウル3日", seoul_s:"文化・カフェ・シティ", seoul_d1:"1日目 — 景福宮、北村、仁寺洞", seoul_d2:"2日目 — 西村カフェ & 弘大ナイト", seoul_d3:"3日目 — 漢江サイクリング & グルメ",
+          busan_t:"釜山2日", busan_s:"海鮮・ビーチ・文化", busan_d1:"1日目 — 甘川文化村、チャガルチ市場", busan_d2:"2日目 — ヘウンデ & 広安里夜景",
+          jeju_t:"済州3日", jeju_s:"自然・海岸・ローカルフード", jeju_d1:"1日目 — 城山日出峰 & 東部カフェ", jeju_d2:"2日目 — 漢拏山(ショート) & 黒豚", jeju_d3:"3日目 — 涯月海岸ドライブ & 夕日",
+          jeonju_t:"全州1日", jeonju_s:"伝統・食・韓屋村", jeonju_d1:"午前 — 韓屋村散策 & フォトスポット", jeonju_d2:"昼 — ビビンバ & 屋台", jeonju_d3:"午後 — 工芸、茶屋 & 五味子",
+          gangneung_t:"江陵2日", gangneung_s:"コーヒー・海岸・市場", gangneung_d1:"1日目 — 安木コーヒー通り & 正東津", gangneung_d2:"2日目 — 烏竹軒 & 中央市場グルメ",
+          themes_title:"🇰🇷 テーマツアー", themes_desc:"宮殿からK‑Popまで、好みに合わせて！",
+          theme_palace_t:"🏯 韓国 宮殿ツアー", theme_palace_d:"景福宮、昌徳宮 & ヒストリーウォーク",
+          theme_cafe_t:"☕ ソウル カフェツアー", theme_cafe_d:"西村・益善洞・韓屋カフェ",
+          theme_kpop_t:"🎤 K‑Pop 体験ツアー", theme_kpop_d:"芸能事務所、ダンススタジオ & 聖地巡礼",
+          price_title:"料金 (パイロット)", price1_t:"カスタム旅程", price1_d:"プランナー設定", price2_t:"プラットフォーム手数料", price2_d:"取引ごと", price3_t:"追加機能", price3_d:"自動翻訳・予約",
+          cta_title:"ベータ待機リストに登録", cta_desc:"旅行者: 無料サンプル旅程 / プランナー: 手数料割引とテンプレート", cta_li1:"✓ メール認証 & オンボーディング", cta_li2:"✓ 地域・予算ベースの推薦", cta_li3:"✓ PDF/App 旅程プレビュー", cta_btn:"登録する", cta_privacy:"送信するとプライバシーポリシーに同意したことになります。",
+          foot_privacy:"プライバシー", foot_terms:"利用規約", foot_contact:"お問い合わせ"
+        },
+        zh: {
+          _lang: "zh", _ogLocale: "zh_CN",
+          _title: "When Where What — 韩国定制行程", 
+          _desc: "与韩国本地人一起规划你的旅程。连接海外自由行旅客与本地策划师，打造专属行程。",
+          _ogTitle: "When Where What | 韩国定制行程",
+          _ogDesc: "由本地策划师打造的行程 —— 宫殿、咖啡、K‑Pop 体验等应有尽有！",
+          nav_overview:"简介", nav_features:"功能", nav_samples:"示例行程", nav_themes:"主题游", nav_pricing:"价格", nav_join:"加入",
+          cta_get_started:"开始使用",
+          hero_title1:"与韩国本地人一起规划你的旅程。", hero_title2:"When • Where • What",
+          hero_desc:"告诉我们你<strong>何时</strong>出行、<strong>去哪里</strong>、<strong>喜欢什么</strong>，韩国本地策划师将为你定制行程。",
+          hero_btn_plan:"开始定制 →", hero_btn_planner:"成为本地策划师",
+          hero_b1:"✓ 英语优先", hero_b2:"✓ 自动翻译", hero_b3:"✓ 城市与自然",
+          hero_brief:"旅行者信息", brief_days:"韩国5日", brief_budget:"预算：$800", brief_likes:"偏好：咖啡、小吃、徒步", brief_lang:"语言：英语", brief_note:"自动翻译 • 智能匹配", hero_sampleit:"示例行程 (PDF/App)",
+          sample_day1:"第1天 — 西村 & 景福宫", sample_day2:"第2天 — 江陵海岸咖啡 ☕️", sample_day3:"第3天 — 釜山海鲜小巷 🐟", sample_day4:"第4天 — 全州韩屋 & 美食", sample_day5:"第5天 — 首尔市集", hero_mocknote:"*界面示例 — 之后连接MVP",
+          ov_title:"什么是 “When Where What”？", ov_desc:"把海外自由行旅客与韩国本地策划师匹配，打造专属行程的平台。", ov_sub_kr:"韩文介绍", ov_desc_kr:"将外国自由行旅客与韩国本地策划师匹配，制作符合喜好的行程。",
+          feat_title:"核心功能",
+          feat1_t:"偏好问卷", feat1_d:"轻量问答 → 即得行程草案",
+          feat2_t:"本地策划师匹配", feat2_d:"风格 • 地区 • 预算",
+          feat3_t:"行程自动生成", feat3_d:"地图 • 时间线 • 链接",
+          feat4_t:"多语言支持", feat4_d:"英/法/日/韩",
+          feat5_t:"评价与社区", feat5_d:"分享与优化路线",
+          feat6_t:"预订扩展", feat6_d:"交通 • 餐饮 • 住宿",
+          samples_title:"🇰🇷 韩国行程示例", samples_desc:"由本地策划师打造的真实案例——城市与自然自由组合。",
+          seoul_t:"首尔3日", seoul_s:"文化 • 咖啡 • 都市", seoul_d1:"第1天 — 景福宫、北村、仁寺洞", seoul_d2:"第2天 — 西村咖啡 & 弘大夜景", seoul_d3:"第3天 — 汉江骑行 & 美食",
+          busan_t:"釜山2日", busan_s:"海鲜 • 海滩 • 文化", busan_d1:"第1天 — 甘川文化村、札嘎其市场", busan_d2:"第2天 — 海云台 & 广安里夜景",
+          jeju_t:"济州3日", jeju_s:"自然 • 海岸 • 地道美食", jeju_d1:"第1天 — 城山日出峰 & 东岸咖啡", jeju_d2:"第2天 — 汉拿山（短线）& 黑猪肉", jeju_d3:"第3天 — 涯月海岸自驾 & 日落",
+          jeonju_t:"全州1日", jeonju_s:"传统 • 美食 • 韩屋村", jeonju_d1:"上午 — 韩屋村散步 & 拍照点", jeonju_d2:"中午 — 拌饭 & 小吃", jeonju_d3:"下午 — 手工艺、茶馆 & 五味子",
+          gangneung_t:"江陵2日", gangneung_s:"咖啡 • 海岸 • 市场", gangneung_d1:"第1天 — 安木咖啡街 & 正东津", gangneung_d2:"第2天 — 乌竹轩 & 中央市场美食",
+          themes_title:"🇰🇷 主题游", themes_desc:"从宫殿到流行文化，按喜好选择！",
+          theme_palace_t:"🏯 韩国·宫殿之旅", theme_palace_d:"景福宫、昌德宫 & 历史漫步",
+          theme_cafe_t:"☕ 首尔·咖啡之旅", theme_cafe_d:"西村、益善洞、韩屋咖啡",
+          theme_kpop_t:"🎤 K‑Pop 体验之旅", theme_kpop_d:"经纪公司、舞蹈室 & 打卡点",
+          price_title:"价格（试运行）", price1_t:"定制行程", price1_d:"由策划师定价", price2_t:"平台费", price2_d:"每笔交易", price3_t:"附加功能", price3_d:"自动翻译 • 预订",
+          cta_title:"加入测试候补名单", cta_desc:"旅行者：免费样例行程；策划师：手续费优惠与模板。", cta_li1:"✓ 邮箱验证与问卷", cta_li2:"✓ 基于地区和预算的推荐", cta_li3:"✓ 预览PDF/App行程", cta_btn:"加入候补", cta_privacy:"提交即表示同意隐私政策。",
+          foot_privacy:"隐私", foot_terms:"条款", foot_contact:"联系"
+        }
+      };
+
+      // Utility to read ?lang= from URL
+      function getParam(name){
+        const url = new URL(window.location.href);
+        return url.searchParams.get(name);
+      }
+
+      // Apply language to text + SEO
+      function applyLang(lang){
+        const dict = I18N[lang] || I18N.en;
+        document.documentElement.lang = dict._lang || lang || "en";
+
+        // Update <title> and meta description
+        document.title = dict._title || document.title;
+        const mDesc = document.querySelector('meta[name="description"]');
+        if (mDesc) mDesc.setAttribute('content', dict._desc || mDesc.getAttribute('content'));
+
+        // Update OG tags
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogLocale = document.querySelector('meta[property="og:locale"]');
+        if (ogTitle && dict._ogTitle) ogTitle.setAttribute('content', dict._ogTitle);
+        if (ogDesc && dict._ogDesc) ogDesc.setAttribute('content', dict._ogDesc);
+        if (ogLocale && dict._ogLocale) ogLocale.setAttribute('content', dict._ogLocale);
+
+        // Update link[rel=alternate] hreflang URLs to include ?lang=code
+        document.querySelectorAll('link[rel="alternate"]').forEach(link => {
+          const hreflang = link.getAttribute('hreflang');
+          const base = window.location.origin + window.location.pathname;
+          link.setAttribute('href', `${base}?lang=${hreflang}`);
+        });
+
+        // Update text nodes
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) el.innerHTML = dict[key];
+        });
+
+        // Persist
+        localStorage.setItem("WWW_LANG", lang);
+      }
+
+      // Init language: URL ?lang= → localStorage → default EN
+      const select = document.getElementById("langSelect");
+      const urlLang = getParam("lang");
+      const saved = localStorage.getItem("WWW_LANG");
+      const initial = urlLang || saved || "en";
+      select.value = initial;
+      applyLang(initial);
+      select.addEventListener("change", e => {
+        const lang = e.target.value;
+        applyLang(lang);
+        // update URL for SEO-friendly alternate
+        const base = window.location.origin + window.location.pathname;
+        history.replaceState({}, "", `${base}?lang=${lang}`);
+      });
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
